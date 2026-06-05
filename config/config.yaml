@@ -1,0 +1,21 @@
+business_rules:
+  passenger_count:
+    min: 1
+    max: 7
+  trip_distance:
+    min: 0.1
+    max: 100.0
+  fare_amount:
+    min: 2.5
+    max: 500.0
+  geo_bounds:
+    min_latitude: 40.4774
+    max_latitude: 40.9176
+    min_longitude: -74.2591
+    max_longitude: -73.7004
+
+  statistical_filters:
+    #任何特征有超过40%的缺失值，即被过滤掉
+    max_missing_ratio: 0.4
+    #任何特征的方差小于0.01（如果方差小于0.01，则说明该特征缺乏变异性，没有任何信息价值），即被过滤掉
+    min_variance: 0.01
